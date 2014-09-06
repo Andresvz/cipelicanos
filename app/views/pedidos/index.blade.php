@@ -38,17 +38,27 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($pedidos as $key => $value)
+               @foreach($pedidos as $key => $value)
                 <tr>
-                    <td>{{ $value->nombre_producto}}</td>
-                    <td>{{ $value->nombre_proveedor }}</td>
-                    <td>{{ $value->nombre_naviera }}</td>
+                    <td>{{ $value->producto->nombre}}</td>
+                    <td>{{ $value->producto->proveedor->nombre }}</td>
+                    <td>{{ $value->naviera->nombre }}</td>
                     <td> 
                         @foreach($value->containers as $llave => $container) 
+<<<<<<< HEAD
                         {{ $container->numero_container }}
+=======
+                        <a href="{{ $value->url_seguimiento . $container->numero_container }}" target="_blank">
+                            {{ $container->numero_container }}
+                        </a> 
+>>>>>>> c038b1faf2bb1ecd86992cfe9ae609ab6363ebb3
                         @endforeach
                     </td>
-                    <td>{{ $value->nombre_guia}}</td>
+                    <td> 
+                        @foreach($value->guias as $llave => $guia) 
+                         {{ $guia->numero_guia. " - ".$guia->empresa_envio}},
+                        @endforeach
+                    </td>
                     <td>{{ $value->numero_reserva}}</td>
                     <td>{{ $value->buque}}</td>
                     <td>{{ $value->fecha_carga}}</td>
