@@ -49,12 +49,7 @@ Route::get('/mod_cliente/dashboard', function(){
 Route::resource('/mod_cliente/companias', 'CompaniasClienteController');
 Route::get('/mod_cliente/pedidos', 'PedidosClienteController@pedidos');
 Route::get('/mod_cliente/historial', 'PedidosClienteController@historial');
-
-Route::get('/mod_cliente/perfil' , function()
-{
-    return View::make('perfil');
-});
-
+Route::get('/mod_cliente/perfil', 'PerfilesController@index');
 
 Route::get('/download/{id}', function($id){
     $guia = Guia::find($id);
