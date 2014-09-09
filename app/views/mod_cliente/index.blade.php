@@ -118,12 +118,8 @@
                             <li>
                                <a href="javascript:abrirPerfil();"><i class="fa fa-fw fa-user"></i> Perfil</a>
                             </li>
-                            <!--li>
-                                <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
-                            </li-->
-                            <li>
-                                <a href="#"><i class="fa fa-fw fa-gear"></i> Config</a>
-                            </li>
+                          
+                           
                             <li class="divider"></li>
                             <li>
                                 <a href="{{url('logout')}}"><i class="fa fa-fw fa-power-off"></i> Cerrar sesi&oacute;n</a>

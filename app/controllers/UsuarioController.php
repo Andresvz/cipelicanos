@@ -103,13 +103,8 @@ class UsuarioController extends BaseController {
         }
     }
     public function update($id) {
-       
-        // read more on validation at http://laravel.com/docs/validation
-
-         if (Request::ajax()) {
+       if (Request::ajax()) {
             $rules = array(
-               
-                
             );
             $validator = Validator::make(Input::all(), $rules);
 
